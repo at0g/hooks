@@ -1,0 +1,7 @@
+.gitignore
+.nvmrc
+.idea
+.prettierignore
+node_modules/**
+dist/**
+coverage/**

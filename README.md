@@ -8,6 +8,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/bd5093bb7e97e2e2937f/maintainability)](https://codeclimate.com/github/at0g/hooks/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bd5093bb7e97e2e2937f/test_coverage)](https://codeclimate.com/github/at0g/hooks/test_coverage)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ### installation
 
