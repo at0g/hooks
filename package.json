@@ -8,7 +8,6 @@
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "files": [
-    "LICENSE",
     "README.md",
     "dist"
   ],
@@ -30,7 +29,7 @@
     "hooks"
   ],
   "author": "Ben Daley <ben@fanboy.io>",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/at0g/hooks/issues"
   },
