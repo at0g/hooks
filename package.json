@@ -35,8 +35,8 @@
   },
   "homepage": "https://github.com/at0g/hooks#readme",
   "peerDependencies": {
-    "react": ">=16.9",
-    "react-dom": ">=16.9"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "dependencies": {},
   "devDependencies": {
