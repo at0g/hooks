@@ -1,5 +1,3 @@
 import useOffline from './useOffline'
 
-export {
-    useOffline
-}
+export { useOffline }

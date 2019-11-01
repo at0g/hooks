@@ -14,13 +14,13 @@ export default function useOffline(fallback = false) {
         }
         return {
             listen: () => {
-                const listeners = ['online', 'offline'].map(type => {
+                const listeners = ['online', 'offline'].map((type) => {
                     const e = window.addEventListener(type, handles[type])
                     return () => window.removeEventListener(type, e)
                 })
 
                 return () => {
-                    listeners.forEach(remove => remove())
+                    listeners.forEach((remove) => remove())
                 }
             },
         }
