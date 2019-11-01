@@ -1,0 +1,64 @@
+{
+  "name": "@at0g/hooks",
+  "engines": {
+    "node": "12.X.X"
+  },
+  "version": "0.0.1",
+  "description": "A collection of useful react hooks",
+  "main": "dist/lib/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build:cjs": "BABEL_ENV=cjs babel -d dist/lib src",
+    "build:esm": "BABEL_ENV=esm babel -d dist/esm src",
+    "clean": "rm -rf dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/at0g/hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "Ben Daley <ben@fanboy.io>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/at0g/hooks/issues"
+  },
+  "homepage": "https://github.com/at0g/hooks#readme",
+  "peerDependencies": {
+    "react": ">=16.9",
+    "react-dom": ">=16.9"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@testing-library/react-hooks": "^3.1.1",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.11.0"
+  },
+  "jest": {
+    "verbose": true,
+    "bail": true,
+    "clearMocks": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**"
+    ]
+  }
+}
