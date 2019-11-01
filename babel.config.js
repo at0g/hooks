@@ -1,29 +1,37 @@
 module.exports = {
-    ignore: ['src/**/*.spec.js'],
     env: {
-        'test': {
+        test: {
             presets: [
-                ['@babel/preset-env', {
-                    modules: 'cjs'
-                }]
-            ]
+                [
+                    '@babel/preset-env',
+                    {
+                        modules: 'cjs',
+                    },
+                ],
+            ],
         },
-        'cjs': {
+        cjs: {
             presets: [
-                ['@babel/preset-env', {
-                    modules: 'cjs'
-                }]
-            ]
+                [
+                    '@babel/preset-env',
+                    {
+                        modules: 'cjs',
+                    },
+                ],
+            ],
         },
-        'esm': {
+        esm: {
             presets: [
-                ['@babel/preset-env', {
-                    modules: false,
-                    targets: {
-                        esmodules: true
-                    }
-                }]
-            ]
-        }
-    }
+                [
+                    '@babel/preset-env',
+                    {
+                        modules: false,
+                        targets: {
+                            esmodules: true,
+                        },
+                    },
+                ],
+            ],
+        },
+    },
 }

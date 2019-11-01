@@ -2,6 +2,7 @@
 
 ![dependencies](https://img.shields.io/david/peer/at0g/hooks)
 ![dev dependencies](https://img.shields.io/david/dev/at0g/hooks)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability-percentage/at0g/hooks)
 
 ### installation
 
