@@ -1,3 +1,4 @@
+import useMedia from './useMedia'
 import useOffline from './useOffline'
 
-export { useOffline }
+export { useMedia, useOffline }
