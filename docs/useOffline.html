@@ -5,8 +5,14 @@
         <title>useOffline</title>
     </head>
     <body>
-        <main id="app-container">
-            <noscript>Please enable javascript</noscript>
+        <main>
+            <div id="app-container">
+                <noscript
+                    >You must enable javascript to view this demo</noscript
+                >
+                Loading demo
+            </div>
+            <p>Go offline to see your status change.</p>
         </main>
 
         <script src="https://unpkg.com/react@^16.8/umd/react.production.min.js"></script>
@@ -15,10 +21,13 @@
         <script>
             ;(function() {
                 function UseOfflineExample() {
-                    var offline = hooks.useOffline()
-
+                    var isOffline = hooks.useOffline()
                     return React.createElement(React.Fragment, {
-                        children: `Status: ${offline ? 'offline' : 'online'}`,
+                        children: [
+                            `You are currently ${
+                                isOffline ? 'offline' : 'online'
+                            }`,
+                        ],
                     })
                 }
                 var container = document.getElementById('app-container')

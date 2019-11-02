@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   useOffline example
+-   very basic docs site: https://at0g.github.io/hooks/
 
 ## [0.0.3] - 2019-11-02
 
