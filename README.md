@@ -12,8 +12,16 @@
 
 ### installation
 
+npm
+
 ```
 npm i -S @upr/hooks
+```
+
+browser
+
+```
+<script src="https://unpkg.com/@upr/hooks"></script>
 ```
 
 ### usage

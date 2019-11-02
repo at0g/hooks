@@ -4,6 +4,8 @@ module.exports = {
         path: __dirname + '/dist/umd',
         filename: '[name].js',
         globalObject: 'this',
+        library: 'hooks',
+        libraryExport: '',
         libraryTarget: 'umd',
     },
     module: {
