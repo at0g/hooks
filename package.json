@@ -1,5 +1,5 @@
 {
-  "name": "@at0g/hooks",
+  "name": "@upr/hooks",
   "engines": {
     "node": "12.X.X"
   },
@@ -7,11 +7,12 @@
   "description": "A collection of useful react hooks",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
+  "sideEffects": false,
   "files": [
     "README.md",
+    "LICENSE",
     "dist"
   ],
-  "sideEffects": false,
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm",
     "build:cjs": "BABEL_ENV=cjs babel -d dist/lib src --ignore 'src/**/*.spec.js'",
@@ -28,7 +29,7 @@
     "react",
     "hooks"
   ],
-  "author": "Ben Daley <ben@fanboy.io>",
+  "author": "upr@fanboy.io",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/at0g/hooks/issues"

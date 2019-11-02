@@ -13,14 +13,14 @@
 ### installation
 
 ```
-npm i -S @at0g/hooks
+npm i -S @upr/hooks
 ```
 
 ### usage
 
 ```
 import React from 'react'
-import { useOffline } from '@at0g/hooks'
+import { useOffline } from '@upr/hooks'
 
 export default () => {
     const fallbackValue = false
