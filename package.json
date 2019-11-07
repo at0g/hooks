@@ -16,10 +16,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:umd",
+    "build": "npm run clean && mkdir dist && npm run build:cjs && npm run build:esm && npm run build:umd",
     "build:babel": "babel src --ignore 'src/**/*.spec.js' --ignore 'src/**/*.stories.js'",
-    "build:cjs": "BABEL_ENV=cjs npm run build:babel -d dist/lib",
-    "build:esm": "BABEL_ENV=esm npm run build:babel -d dist/esm",
+    "build:cjs": "BABEL_ENV=cjs npm run build:babel -- -d dist/lib",
+    "build:esm": "BABEL_ENV=esm npm run build:babel -- -d dist/esm",
     "build:umd": "webpack -p --env=production --output-filename=hooks.production.js",
     "clean": "rm -rf dist",
     "test": "jest",
