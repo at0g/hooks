@@ -1,6 +1,8 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import useMedia from './useMedia'
 
+function MatchMediaStub() {}
+
 describe('useMedia', () => {
     describe('fallback', () => {
         const query = '(something: impossible)'

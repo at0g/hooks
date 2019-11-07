@@ -8,16 +8,11 @@ export default {
 export const usage = () => {
     const query = '(min-width: 900px)'
     const fallback = false
-    const state = useMedia(query, false)
+    const state = useMedia(query, fallback)
 
     return (
         <>
-            <p>
-                Change window width to see state change.
-                <br />
-                Provide a <code>fallback</code> value to use when{' '}
-                <code>window.matchMedia</code> is unsupported
-            </p>
+            <p>Change window width to see state change</p>
             <pre>
                 <code>{`
 const query = '(min-width: 900px)'

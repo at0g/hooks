@@ -1,4 +1,5 @@
 module.exports = {
+    plugins: ['@babel/plugin-proposal-export-default-from'],
     env: {
         test: {
             presets: [

@@ -17,12 +17,16 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:umd",
-    "build:cjs": "BABEL_ENV=cjs babel -d dist/lib src --ignore 'src/**/*.spec.js'",
-    "build:esm": "BABEL_ENV=esm babel -d dist/esm src --ignore 'src/**/*.spec.js'",
+    "build:babel": "babel src --ignore 'src/**/*.spec.js' --ignore 'src/**/*.stories.js'",
+    "build:cjs": "BABEL_ENV=cjs npm run build:babel -d dist/lib",
+    "build:esm": "BABEL_ENV=esm npm run build:babel -d dist/esm",
     "build:umd": "webpack -p --env=production --output-filename=hooks.production.js",
     "clean": "rm -rf dist",
     "test": "jest",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages --out=.out"
   },
   "repository": {
     "type": "git",
@@ -46,8 +50,14 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@testing-library/react-hooks": "^3.1.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
@@ -74,6 +84,7 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!**/index.js",
+      "!**/*.stories.js",
       "!**/node_modules/**"
     ]
   },
