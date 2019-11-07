@@ -68,7 +68,6 @@
     "pretty-quick": "^2.0.0"
   },
   "jest": {
-    "verbose": true,
     "bail": true,
     "clearMocks": true,
     "collectCoverage": true,
