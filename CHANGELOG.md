@@ -7,28 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+-   BREAKING unpkg UMD export changed from `window.hooks` to `window.uprHooks`
+
 ### Added
 
--   useIntersect hook (simple IntersectionObserver)
--   isBrowser util
+-   `useIntersect` hook (simple `IntersectionObserver`)
+-   `isBrowser` util
 
 ### Fixed
 
--   code coverage for useOffline
--   husky and pretty-quick are no longer dependencies
+-   code coverage for `useOffline`
+-   husky and pretty-quick are now devDependencies instead of dependencies
 
 ## [0.1.0] - 2019-11-8
 
 ### Added
 
--   useMedia hook
--   storybook docs
+-   `useMedia` hook
+-   @storybook/react static site as github pages
 
 ## [0.0.3] - 2019-11-02
 
 ### Fixed
 
--   UMD output for unpkg now exports `window.hooks`
+-   unpkg UMD build now exports `window.hooks`
 
 ## [0.0.2] - 2019-11-02
 

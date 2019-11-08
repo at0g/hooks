@@ -27,6 +27,7 @@ browser
 
 ```
 <script src="https://unpkg.com/@upr/hooks"></script>
+<!-- access as window.uprHooks -->
 ```
 
 ### usage
