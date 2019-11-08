@@ -7,19 +7,8 @@ const defaultOptions = {
     threshold: 1.0,
 }
 
-export default function useIntersect(options = defaultOptions) {
+function useObserver(setState, options) {
     const browser = isBrowser()
-    const [state, setState] = useState(false)
-    const [target, setTarget] = useState(null)
-    const ref = useCallback(
-        (domNode) => {
-            if (domNode !== target) {
-                setTarget(domNode)
-            }
-        },
-        [target, setTarget]
-    )
-
     const callback = useCallback(
         (entries) => {
             setState(entries[0].isIntersecting)
@@ -31,10 +20,36 @@ export default function useIntersect(options = defaultOptions) {
             return new window.IntersectionObserver(callback, options)
         }
     }, [browser, callback, options])
+    return observer
+}
 
+function useTarget() {
+    const [target, setTarget] = useState(null)
+    const ref = useCallback(
+        (domNode) => {
+            if (domNode !== target) {
+                setTarget(domNode)
+            }
+        },
+        [target, setTarget]
+    )
+
+    return [target, ref]
+}
+
+export default function useIntersect(
+    options = defaultOptions,
+    fallback = false
+) {
+    const [state, setState] = useState(fallback)
+    const [target, ref] = useTarget()
+    const observer = useObserver(setState, options)
     useEffect(() => {
         if (target) {
             observer.observe(target)
+            return () => {
+                observer.unobserve(target)
+            }
         }
     }, [observer, target])
 
