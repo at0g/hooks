@@ -1,17 +1,20 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import useOffline from './useOffline'
+import isBrowser from '../utils/isBrowser'
+
+jest.mock('../utils/isBrowser', () => ({
+    __esModule: true,
+    default: jest.fn(() => true),
+}))
 
 describe('useOffline', () => {
     describe('fallback values', () => {
-        let win
         beforeAll(() => {
-            win = window
-            window = undefined
+            isBrowser.mockReturnValue(false)
         })
         afterAll(() => {
-            window = win
+            isBrowser.mockReturnValue(true)
         })
-
         it('returns false by default', () => {
             const { result } = renderHook(() => useOffline())
             expect(result.current).toBe(false)

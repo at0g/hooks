@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import isBrowser from '../utils/isBrowser'
 
 function useEvents(setState) {
     const eventListeners = useMemo(() => {
@@ -9,10 +10,10 @@ function useEvents(setState) {
         const noop = () => {}
         return {
             subscribe: () => {
+                if (!isBrowser()) {
+                    return noop
+                }
                 const listeners = ['online', 'offline'].map((type) => {
-                    if (typeof window === 'undefined') {
-                        return noop
-                    }
                     const e = window.addEventListener(type, handles[type])
                     return () => window.removeEventListener(type, e)
                 })

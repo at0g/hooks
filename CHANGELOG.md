@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   isBrowser util
+
+### Fixed
+
+-   code coverage for useOffline
+
 ## [0.1.0] - 2019-11-8
 
 ### Added
