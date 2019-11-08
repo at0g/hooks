@@ -7,11 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2019-11-8
+
 ### Added
 
--   very basic docs site: https://at0g.github.io/hooks/
--   storybook example
--   useMedia
+-   useMedia hook
+-   storybook docs
 
 ## [0.0.3] - 2019-11-02
 

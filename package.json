@@ -3,7 +3,7 @@
   "engines": {
     "node": "12.X.X"
   },
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A collection of useful react hooks",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
