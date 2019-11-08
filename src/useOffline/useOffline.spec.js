@@ -3,6 +3,15 @@ import useOffline from './useOffline'
 
 describe('useOffline', () => {
     describe('fallback values', () => {
+        let win
+        beforeAll(() => {
+            win = window
+            window = undefined
+        })
+        afterAll(() => {
+            window = win
+        })
+
         it('returns false by default', () => {
             const { result } = renderHook(() => useOffline())
             expect(result.current).toBe(false)
