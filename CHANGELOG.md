@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   code coverage for useOffline
+-   husky and pretty-quick are no longer dependencies
 
 ## [0.1.0] - 2019-11-8
 
