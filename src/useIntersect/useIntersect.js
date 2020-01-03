@@ -16,7 +16,7 @@ function useObserver(setState, options) {
         [setState]
     )
     const observer = useMemo(() => {
-        if (browser) {
+        if (browser && typeof window.IntersectionObserver !== 'undefined') {
             return new window.IntersectionObserver(callback, options)
         }
     }, [browser, callback, options])
@@ -45,7 +45,7 @@ export default function useIntersect(
     const [target, ref] = useTarget()
     const observer = useObserver(setState, options)
     useEffect(() => {
-        if (target) {
+        if (observer && target) {
             observer.observe(target)
             return () => {
                 observer.unobserve(target)
